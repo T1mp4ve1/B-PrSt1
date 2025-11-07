@@ -1,0 +1,15 @@
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.AssemblyInfoInputs.cache
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.AssemblyInfo.cs
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.sourcelink.json
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\bin\Debug\net8.0\SoldiSoldiSoldi.exe
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\bin\Debug\net8.0\SoldiSoldiSoldi.deps.json
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\bin\Debug\net8.0\SoldiSoldiSoldi.runtimeconfig.json
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\bin\Debug\net8.0\SoldiSoldiSoldi.dll
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\bin\Debug\net8.0\SoldiSoldiSoldi.pdb
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.dll
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\refint\SoldiSoldiSoldi.dll
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.pdb
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\SoldiSoldiSoldi.genruntimeconfig.cache
+C:\Users\Pavel\Desktop\Corsi\Back\PrSt\B-PrSt1\SoldiSoldiSoldi\obj\Debug\net8.0\ref\SoldiSoldiSoldi.dll
