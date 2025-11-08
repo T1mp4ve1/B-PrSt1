@@ -1,11 +1,12 @@
-﻿namespace SoldiSoldiSoldi
+﻿using SoldiSoldiSoldi.methods;
+namespace SoldiSoldiSoldi
 {
     public static class Contribuente
     {
         public static string? Name;
         public static string? LastName;
         public static string? Sex;
-        public static DateTime Birth;
+        public static DateOnly Birth;
         public static string? CF;
         public static string? Resident;
         public static decimal Income;
@@ -14,78 +15,37 @@
         //DATI CLIENTE
         public static void UserInfo()
         {
-            //NOME
-            Console.WriteLine("\nInserisci tuo nome:");
-            Name = Console.ReadLine();
-            //COGNOME
-            Console.WriteLine("\nInserisci tuo cognome:");
-            LastName = Console.ReadLine();
-            //SESSO
-            bool sexChoice = false;
+            Name = UserName.NameSet();
+            LastName = UserLastName.LastNameSet();
+            Sex = UserSex.SexSet();
+            Birth = UserBirthDate.BirthSet();
+            CF = UserCF.CFSet();
+            Resident = UserResident.ResidentSet();
+
+            //MODIFICA DATI
+            bool confirmForm = false;
             do
             {
-                Console.WriteLine("\nSeleziona il tuo sesso:");
-                Console.WriteLine("1 - Maschio");
-                Console.WriteLine("2 - Femmina");
-                Console.WriteLine("3 - Booh");
+                Console.Clear();
+                Console.WriteLine("\nDati del contribuente:");
+                Console.WriteLine("=================================================\n");
+                Console.WriteLine($"Contribuente: {Name} {LastName} ({Sex})");
+                Console.WriteLine($"nato il: {Birth}");
+                Console.WriteLine($"Residente in: {Resident}");
+                Console.WriteLine($"Codice fiscale: {CF}");
+                Console.WriteLine("\n=================================================\n");
+                Console.WriteLine("Premi <1> per confermare, <2> per modificare i dati");
                 string? choice = Console.ReadLine();
-
                 switch (choice)
                 {
                     case "1":
-                        Sex = "M";
-                        sexChoice = true;
+                        confirmForm = true;
                         break;
                     case "2":
-                        Sex = "F";
-                        sexChoice = true;
-                        break;
-                    case "3":
-                        Sex = "X";
-                        sexChoice = true;
-                        break;
-                    default:
-                        Console.WriteLine("\nScelta non valida\n");
+                        ModifiedInfo.InfoToMod();
                         break;
                 }
-            } while (!sexChoice);
-            //NASCITA
-            bool BirthStatus = false;
-            do
-            {
-                Console.WriteLine("\nInserisci la tua data di nascita in formato: gg/mm/aaaa");
-                string? input = Console.ReadLine();
-
-                if (DateTime.TryParseExact(input, "dd/MM/yyyy",
-                    System.Globalization.CultureInfo.InvariantCulture,
-                    System.Globalization.DateTimeStyles.None, out DateTime birthDate))
-                {
-                    Birth = birthDate;
-                    BirthStatus = true;
-                }
-                else
-                {
-                    Console.WriteLine("\nDevi inserire una data valida");
-                }
-            } while (!BirthStatus);
-            //CF
-            bool CFStatus = false;
-            do
-            {
-                Console.WriteLine("\nInserisci il tuo codice fiscale:");
-                string? input = Console.ReadLine();
-                CF = input;
-                CFStatus = true;
-            } while (!CFStatus);
-            //RESIDENZA
-            bool Residenttatus = false;
-            do
-            {
-                Console.WriteLine("\nInserisci la citta di residenza:");
-                string? input = Console.ReadLine();
-                Resident = input;
-                Residenttatus = true;
-            } while (!Residenttatus);
+            } while (!confirmForm);
         }
 
         //IMPOSTA

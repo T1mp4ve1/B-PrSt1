@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoldiSoldiSoldi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d36e1300bef10d056f52b782d0bd878d21f54ee1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e667f1db0bbb86cf020f5674b7c12e5cf3516ef4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoldiSoldiSoldi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoldiSoldiSoldi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
