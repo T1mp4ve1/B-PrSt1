@@ -5,7 +5,7 @@
         public static string? Name;
         public static string? LastName;
         public static string? Sex;
-        public static string? Birth;
+        public static DateTime Birth;
         public static string? CF;
         public static string? Resident;
         public static decimal Income;
@@ -15,10 +15,10 @@
         public static void UserInfo()
         {
             //NOME
-            Console.WriteLine("Inserisci tuo nome:");
+            Console.WriteLine("\nInserisci tuo nome:");
             Name = Console.ReadLine();
             //COGNOME
-            Console.WriteLine("Inserisci tuo cognome:");
+            Console.WriteLine("\nInserisci tuo cognome:");
             LastName = Console.ReadLine();
             //SESSO
             bool sexChoice = false;
@@ -45,7 +45,7 @@
                         sexChoice = true;
                         break;
                     default:
-                        Console.WriteLine("Scelta non valida\n");
+                        Console.WriteLine("\nScelta non valida\n");
                         break;
                 }
             } while (!sexChoice);
@@ -53,16 +53,26 @@
             bool BirthStatus = false;
             do
             {
-                Console.WriteLine("Inserisci la tua data di nascita in formato: gg/mm/aaaa");
+                Console.WriteLine("\nInserisci la tua data di nascita in formato: gg/mm/aaaa");
                 string? input = Console.ReadLine();
-                Birth = input;
-                BirthStatus = true;
+
+                if (DateTime.TryParseExact(input, "dd/MM/yyyy",
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None, out DateTime birthDate))
+                {
+                    Birth = birthDate;
+                    BirthStatus = true;
+                }
+                else
+                {
+                    Console.WriteLine("\nDevi inserire una data valida");
+                }
             } while (!BirthStatus);
             //CF
             bool CFStatus = false;
             do
             {
-                Console.WriteLine("Inserisci il tuo codice fiscale:");
+                Console.WriteLine("\nInserisci il tuo codice fiscale:");
                 string? input = Console.ReadLine();
                 CF = input;
                 CFStatus = true;
@@ -71,7 +81,7 @@
             bool Residenttatus = false;
             do
             {
-                Console.WriteLine("Inserisci la citta di residenza:");
+                Console.WriteLine("\nInserisci la citta di residenza:");
                 string? input = Console.ReadLine();
                 Resident = input;
                 Residenttatus = true;
@@ -84,7 +94,7 @@
             bool convertRes = false;
             do
             {
-                Console.WriteLine("Inserisci tuo reddito annuale:");
+                Console.WriteLine("\nInserisci tuo reddito annuale:");
                 string? input = Console.ReadLine();
                 if (decimal.TryParse(input, out decimal convertInput) && convertInput >= 0)
                 {
@@ -133,7 +143,6 @@
             {
                 ToBePaid = Trashold5;
             }
-            Console.WriteLine($"Da pagare: {ToBePaid}");
         }
         //FINAL
         public static void ShowResults()
