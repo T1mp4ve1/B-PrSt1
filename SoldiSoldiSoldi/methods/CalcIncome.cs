@@ -8,7 +8,7 @@
             decimal income = 0;
             do
             {
-                Console.WriteLine("\nInserisci il tuo reddito annuale:");
+                Console.WriteLine("\nInserisci il reddito annuale:");
                 string? input = Console.ReadLine();
                 if (decimal.TryParse(input, out decimal convertInput) && convertInput >= 0)
                 {

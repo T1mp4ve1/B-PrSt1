@@ -33,8 +33,8 @@ namespace SoldiSoldiSoldi
                 Console.WriteLine($"nato il: {Birth}");
                 Console.WriteLine($"Residente in: {Resident}");
                 Console.WriteLine($"Codice fiscale: {CF}");
-                Console.WriteLine("\n=================================================\n");
-                Console.WriteLine("Premi <1> per confermare, <2> per modificare i dati");
+                Console.WriteLine("\n=================================================");
+                Console.WriteLine("\nPremi <1> per confermare, <2> per modificare i dati");
                 string? choice = Console.ReadLine();
                 switch (choice)
                 {
@@ -48,16 +48,38 @@ namespace SoldiSoldiSoldi
             } while (!confirmForm);
 
             //IMPOSTA
-            Income = CalcIncome.IncomeSet();
-            ToBePaid = CalcIncome.TaxCalc();
-        }
-
-        //FINAL
-        public static void ShowResults()
-        {
-            Console.WriteLine("==================================================");
-            Console.WriteLine($"Reddito dichiarato: {Income}\r\n");
-            Console.WriteLine($"IMPOSTA DA VERSARE: {ToBePaid}\r\n");
+            bool recalc = false;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("\nDati del contribuente:");
+                Console.WriteLine("=================================================\n");
+                Console.WriteLine($"Contribuente: {Name} {LastName} ({Sex})");
+                Console.WriteLine($"nato il: {Birth}");
+                Console.WriteLine($"Residente in: {Resident}");
+                Console.WriteLine($"Codice fiscale: {CF}");
+                Console.WriteLine("\n=================================================");
+                Income = CalcIncome.IncomeSet();
+                ToBePaid = CalcIncome.TaxCalc();
+                Console.WriteLine($"\nReddito dichiarato: {Income}\n");
+                Console.WriteLine($"Imposta da versare: {ToBePaid}");
+                Console.WriteLine("\n=================================================");
+                Console.WriteLine("\nVuoi fare un'altro calcolo?");
+                Console.WriteLine("1.Si");
+                Console.WriteLine("2.No");
+                string? choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        recalc = true;
+                        break;
+                    default:
+                        Console.WriteLine("Cosa?!");
+                        break;
+                }
+            } while (!recalc);
         }
     }
 }
